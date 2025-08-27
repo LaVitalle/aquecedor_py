@@ -13,7 +13,7 @@ async def respond_recieved_message(request: Request):
     print(
         "--------------------------------------------------------------------------------------------------------------------------------------------------------"
     )
-    instance_id = body["data"]["instanceId"]
+    instance_id = body["instance"]
     server_url = body["server_url"]
     apikey = body["apikey"]
     message = body["data"]["message"]["conversation"]
