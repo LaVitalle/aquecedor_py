@@ -5,6 +5,7 @@ from app.schemas.item import ItemCreate, ItemResponse, ItemUpdate
 router = APIRouter()
 
 @router.post("/")
-async def respond_recieved_message(HttpReq: Request):
-    print(HttpReq.body)
+async def respond_recieved_message(request: Request):
+    body = await request.json()
+    print(body)
     return {"message": "Message received"}
