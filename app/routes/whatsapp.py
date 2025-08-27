@@ -9,6 +9,10 @@ router = APIRouter()
 @router.post("/")
 async def respond_recieved_message(request: Request):
     body = await request.json()
+    print(body)
+    print(
+        "--------------------------------------------------------------------------------------------------------------------------------------------------------"
+    )
     instance_id = body["data"]["message"]["instanceId"]
     server_url = body["data"]["server_url"]
     apikey = body["data"]["apikey"]
