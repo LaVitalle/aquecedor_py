@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     # Configurações básicas
     app_name: str = "Aquecedor Whatsapp API"
     app_version: str = "1.0.0"
-    debug: bool = False
+    debug: bool = os.getenv("DEBUG", True)
     
     # Configurações do servidor
     host: str = "0.0.0.0"
