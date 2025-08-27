@@ -13,9 +13,9 @@ async def respond_recieved_message(request: Request):
     print(
         "--------------------------------------------------------------------------------------------------------------------------------------------------------"
     )
-    instance_id = body["data"]["message"]["instanceId"]
-    server_url = body["data"]["server_url"]
-    apikey = body["data"]["apikey"]
+    instance_id = body["data"]["instanceId"]
+    server_url = body["server_url"]
+    apikey = body["apikey"]
     message = body["data"]["message"]["conversation"]
 
     # Send message to whatsapp
