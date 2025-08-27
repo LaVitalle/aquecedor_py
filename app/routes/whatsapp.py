@@ -23,12 +23,7 @@ async def respond_recieved_message(request: Request):
     headers = {"Content-Type": "application/json", "apikey": apikey}
     data = {
         "number": "5545998231771@s.whatsapp.net",
-        "options": {
-            "key": {
-                "remoteJid": "5545998231771@s.whatsapp.net",
-            }
-        },
-        "textMessage": {"text": f"Olá! Mensagem recebida com sucesso. {message}"},
+        "text": f"Olá! Mensagem recebida com sucesso. {message}"
     }
     response = requests.post(url, headers=headers, json=data)
     print(response.json())
