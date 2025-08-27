@@ -6,5 +6,5 @@ router = APIRouter()
 
 @router.post("/")
 async def respond_recieved_message(HttpReq: Request):
-    print(HttpReq)
+    print(HttpReq.body)
     return {"message": "Message received"}
